@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @short_url.user_id
+%p
+  %b Shortened url:
+  = @short_url.shortened_url
+%p
+  %b Actual url:
+  = @short_url.actual_url
+
+= link_to 'Edit', edit_short_url_path(@short_url)
+\|
+= link_to 'Back', short_urls_path
