@@ -13,7 +13,8 @@
           %a{:href => "#{root_path}"} Home
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "#{users_auth_token_path}"} Api Key
+          -if user_signed_in?
+            %a{:href => "#{users_auth_token_path}"} Api Key
         %li
           -if user_signed_in?
             = link_to('Logout', destroy_user_session_path, method: :delete)
