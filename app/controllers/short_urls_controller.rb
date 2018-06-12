@@ -1,6 +1,7 @@
 class ShortUrlsController < ApplicationController
   before_action :set_short_url, only: [:show, :edit, :update, :destroy]
   before_action :set_short_code, only: [:redirect_to_actual_url]
+  before_action :authenticate_user!
 
   # GET /short_urls
   # GET /short_urls.json
