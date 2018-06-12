@@ -6,7 +6,7 @@
         - @short_url.errors.full_messages.each do |message|
           %li= message
   .field
-    = f.label :actual_url
+    = f.label :actual_url, 'Your Website Url'
     = f.text_field :actual_url
   .actions
-    = f.submit 'Save'
+    = f.submit 'Short My Url', class: "btn btn-primary"

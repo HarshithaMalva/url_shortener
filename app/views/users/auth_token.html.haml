@@ -1,0 +1,4 @@
+-if current_user.auth_token.present?
+    =current_user.auth_token 
+-else
+    =link_to "Generate Auth Token", users_generate_auth_token_path

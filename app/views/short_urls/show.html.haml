@@ -1,11 +1,7 @@
 %p#notice= notice
-
-%p
-  %b User:
-  = @short_url.user_id
 %p
   %b Shortened url:
-  = @short_url.shortened_url
+  =link_to "http://localhost:3000/" + @short_url.shortened_url, "http://localhost:3000/" + @short_url.shortened_url
 %p
   %b Actual url:
   = @short_url.actual_url
